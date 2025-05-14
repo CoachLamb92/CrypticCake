@@ -1,9 +1,9 @@
 # CrypticCake
 A self-learning collaborative piece based around NLP and linguistic modelling
 
-## Training an AI to better solve cryptic crosswords is a fascinating challenge that sits at the intersection of natural language understanding, linguistic pattern recognition, and logic/puzzle solving. Here’s a breakdown of how you could approach this:
+Training an AI to better solve cryptic crosswords is a fascinating challenge that sits at the intersection of natural language understanding, linguistic pattern recognition, and logic/puzzle solving. Here’s a breakdown of how you could approach this:
 
-🧠 1. Understand the Structure of Cryptic Clues
+### 1. Understand the Structure of Cryptic Clues
 Cryptic clues typically consist of:
 
 A definition (usually at the beginning or end)
@@ -18,7 +18,7 @@ Identify clue types
 
 Map clue components to word construction techniques
 
-🏗️ 2. Dataset Collection
+### 2. Dataset Collection
 You’ll need a training corpus of cryptic clues with annotated solutions and explanations. Some options:
 
 Openly available crosswords (Guardian, Independent, Times — some are accessible via archives or web scraping)
@@ -39,7 +39,7 @@ Edit
     "type": ["charade", "deletion"]
   }
 }
-🧩 3. Model Approaches
+### 3. Model Approaches
 There are a few promising routes here:
 
 a. Fine-tune an LLM (like GPT) on cryptic data
@@ -61,7 +61,7 @@ Use a transformer to map the current clue to those patterns
 
 Apply a rule-based generator to propose candidate answers
 
-⚙️ 4. Training Tasks
+### 4. Training Tasks
 Train your model to do the following:
 
 Clue segmentation: Break a clue into [definition] + [wordplay]
@@ -72,7 +72,7 @@ Wordplay resolution: Convert clue elements into construction steps
 
 Candidate ranking: Given a clue and a list of answer candidates, rank the best match
 
-🧪 5. Evaluation
+### 5. Evaluation
 Evaluate performance by:
 
 Accuracy of final answer
@@ -87,12 +87,12 @@ Guardian/Times cryptics with solutions
 
 Custom benchmarks with known clue types
 
-🧰 6. Tools & Libraries
+### 6. Tools & Libraries
 NLP: Hugging Face Transformers, spaCy, NLTK
 
 Fine-tuning: PyTorch/Transformers or OpenAI's fine-tuning endpoints
 
 Wordplay tools: Use libraries like XWordInfo (for American-style), or write custom regex/anagram solvers
 
-🧠 Bonus: Train with Explanations
+### Bonus: Train with Explanations
 One novel approach is to supervise with explanations, not just answers — training the model to generate a breakdown of clue mechanics. This aligns with how humans actually learn to solve cryptics.
