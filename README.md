@@ -7,15 +7,12 @@ Training an AI to better solve cryptic crosswords is a fascinating challenge tha
 Cryptic clues typically consist of:
 
 A definition (usually at the beginning or end)
-
 A wordplay component (anagram, hidden word, homophone, container, charade, etc.)
 
 The AI must:
 
 Recognize clue structure
-
 Identify clue types
-
 Map clue components to word construction techniques
 
 ### 2. Dataset Collection
@@ -27,9 +24,6 @@ Use forums like 15² for annotated solutions
 
 Create a dataset in the format:
 
-json
-Copy
-Edit
 {
   "clue": "Lift former partner, endlessly, for praise (6)",
   "answer": "extol",
@@ -38,11 +32,13 @@ Edit
     "explanation": "EX (former partner) + TOL (TOL(D), endlessly)",
     "type": ["charade", "deletion"]
   }
-}
+^ This example is incorrect, but for now, the template is sound.
+
 ### 3. Model Approaches
 There are a few promising routes here:
 
 a. Fine-tune an LLM (like GPT) on cryptic data
+
 Use a GPT-style model trained on general language tasks
 
 Fine-tune with cryptic clue-answer-explanation triplets
@@ -50,11 +46,13 @@ Fine-tune with cryptic clue-answer-explanation triplets
 Encourage reasoning with chain-of-thought supervision
 
 b. Train a dual-system model
+
 One sub-model identifies clue structure (e.g., classify wordplay type)
 
 Another constructs or verifies potential answers using rules
 
 c. Use retrieval + reasoning
+
 Use a retrieval system to fetch similar solved clues
 
 Use a transformer to map the current clue to those patterns
