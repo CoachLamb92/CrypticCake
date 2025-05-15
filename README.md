@@ -1,6 +1,9 @@
 # CrypticCake
 A self-learning collaborative piece based around NLP and linguistic modelling
 
+## To create the database locally
+psql -f clues_db.sql
+
 Training an AI to better solve cryptic crosswords is a fascinating challenge that sits at the intersection of natural language understanding, linguistic pattern recognition, and logic/puzzle solving. Here’s a breakdown of how you could approach this:
 
 ### 1. Understand the Structure of Cryptic Clues

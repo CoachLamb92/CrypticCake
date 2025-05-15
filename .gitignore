@@ -1,3 +1,9 @@
+# Bespoke gitignores
+CrypticClueDataSets/*
+
+# CSVs (too large, use databases)
+*.csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

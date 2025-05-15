@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS clues_db;
+CREATE DATABASE clues_db;
